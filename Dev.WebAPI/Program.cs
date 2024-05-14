@@ -55,6 +55,9 @@ namespace Dev.WebAPI
                         services.AddTransient<Seed>();
                         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+                        services.AddScoped<IDepenseService, DepenseService>();
+                        services.AddScoped<ISuiviDepenseService, SuiviDepenseService>();
+
                         services.AddScoped<DataContext>();
                         services.AddDbContext<DataContext>(option =>
                         {

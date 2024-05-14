@@ -10,9 +10,9 @@ C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.Assembly
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.AssemblyInfo.cs
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.csproj.CoreCompileInputs.cache
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.sourcelink.json
-C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.csproj.CopyComplete
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.dll
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\refint\Dev.DataAccess.dll
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.pdb
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.genruntimeconfig.cache
 C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\ref\Dev.DataAccess.dll
+C:\loicm\dev\Dev-Depense\Dev.DataAccess\obj\Debug\net7.0\Dev.DataAccess.csproj.CopyComplete

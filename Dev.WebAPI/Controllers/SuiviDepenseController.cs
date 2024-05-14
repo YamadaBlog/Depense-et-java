@@ -1,83 +1,150 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Dev.Business.Interfaces;
+using Dev.Common.Models;
+using Dev.Common.Resources;
 
-namespace Dev.WebAPI.Controllers
+namespace Dev.WebAPI.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class SuiviDepensesController : ControllerBase
 {
-    public class SuiviDepenseController : Controller
+    private readonly ISuiviDepenseService _suiviDepenseService;
+    private readonly IMapper _mapper;
+
+    public SuiviDepensesController(ISuiviDepenseService suiviDepenseService, IMapper mapper)
     {
-        // GET: SuiviDepenseController
-        public ActionResult Index()
+        _suiviDepenseService = suiviDepenseService;
+        _mapper = mapper;
+    }
+
+    [HttpPost]
+    [ProducesResponseType(204)]
+    [ProducesResponseType(400)]
+
+    public IActionResult CreateSuiviDepense([FromBody] SuiviDepenseResource suiviDepenseCreate)
+    {
+        if (suiviDepenseCreate == null)
+            return BadRequest(ModelState);
+
+        // Vérifie si suiviDepense existe
+        var suiviDepenses = _suiviDepenseService.SuiviDepenseExists(suiviDepenseCreate);
+
+        if (suiviDepenses)
         {
-            return View();
+            ModelState.AddModelError("", "SuiviDepense doesn't exists or SuiviDepense already exists");
+            return StatusCode(422, ModelState);
         }
 
-        // GET: SuiviDepenseController/Details/5
-        public ActionResult Details(int id)
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var suiviDepenseMap = _mapper.Map<SuiviDepense>(suiviDepenseCreate);
+
+        if (!_suiviDepenseService.CreateSuiviDepense(suiviDepenseMap))
         {
-            return View();
+            ModelState.AddModelError("", "Something went wrong while savin");
+            return StatusCode(500, ModelState);
         }
 
-        // GET: SuiviDepenseController/Create
-        public ActionResult Create()
+        return Ok("Successfully created");
+    }
+
+    [HttpGet("{suiviDepenseId}/depenses")]
+    public IActionResult GetDepensesBySuiviDepense(int suiviDepenseId)
+    {
+        if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
+            return NotFound();
+
+        var depenses = _mapper.Map<List<DepenseResource>>(
+            _suiviDepenseService.GetDepensesBySuiviDepense(suiviDepenseId));
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        return Ok(depenses);
+    }
+
+    [HttpGet("{suiviDepenseId}")]
+    [ProducesResponseType(200, Type = typeof(SuiviDepense))]
+    [ProducesResponseType(400)]
+    public IActionResult GetSuiviDepenseById(int suiviDepenseId)
+    {
+        if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
+            return NotFound();
+
+        var suiviDepense = _mapper.Map<SuiviDepenseResource>(_suiviDepenseService.GetSuiviDepenseById(suiviDepenseId));
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        return Ok(suiviDepense);
+    }
+
+    [HttpGet]
+    [ProducesResponseType(200, Type = typeof(IEnumerable<SuiviDepense>))]
+    public IActionResult GetSuiviDepenses()
+    {
+        var suiviDepenses = _mapper.Map<List<SuiviDepenseResource>>(_suiviDepenseService.GetSuiviDepenses());
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        return Ok(suiviDepenses);
+    }
+
+    [HttpPut("{suiviDepenseId}")]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(204)]
+    [ProducesResponseType(404)]
+    public IActionResult UpdateSuiviDepense(int suiviDepenseId, [FromBody] SuiviDepenseResource updatedSuiviDepense)
+    {
+        if (updatedSuiviDepense == null)
+            return BadRequest(ModelState);
+
+        if (suiviDepenseId != updatedSuiviDepense.Id)
+            return BadRequest(ModelState);
+
+        if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
+            return NotFound();
+
+        if (!ModelState.IsValid)
+            return BadRequest();
+
+        var suiviDepenseMap = _mapper.Map<SuiviDepense>(updatedSuiviDepense);
+
+        if (!_suiviDepenseService.UpdateSuiviDepense(suiviDepenseMap))
         {
-            return View();
+            ModelState.AddModelError("", "Something went wrong updating owner");
+            return StatusCode(500, ModelState);
         }
 
-        // POST: SuiviDepenseController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        return Ok("Successfully Updated");
+    }
+
+
+    [HttpDelete("{suiviDepenseId}")]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(204)]
+    [ProducesResponseType(404)]
+    public IActionResult DeleteSuiviDepense(int suiviDepenseId)
+    {
+        if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return NotFound();
         }
 
-        // GET: SuiviDepenseController/Edit/5
-        public ActionResult Edit(int id)
+        var suiviDepenseToDelete = _suiviDepenseService.GetSuiviDepenseById(suiviDepenseId);
+
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        if (!_suiviDepenseService.DeleteSuiviDepense(suiviDepenseToDelete))
         {
-            return View();
+            ModelState.AddModelError("", "Something went wrong deleting suiviDepense");
         }
 
-        // POST: SuiviDepenseController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: SuiviDepenseController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: SuiviDepenseController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        return Ok("Successfully deleted");
     }
 }

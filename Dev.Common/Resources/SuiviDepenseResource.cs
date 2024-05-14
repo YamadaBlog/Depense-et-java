@@ -10,6 +10,5 @@ namespace Dev.Common.Resources
     {
         public int Id { get; set; }
         public string Statut { get; set; }
-        public int DepenseId { get; set; }
     }
 }

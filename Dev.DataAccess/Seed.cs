@@ -24,16 +24,16 @@ namespace Dev.DataAccess
                 context.SaveChanges();
             }
 
-            var depense1 = new Depense { Montant = 18, Description = "Jean", Date = DateTime.Now};
-            var depense2 = new Depense { Montant = 19, Description = "Marie", Date = DateTime.Now};
-
-            context.Depenses.AddRange(depense1, depense2);
-            context.SaveChanges();
-
-            var suiviDepense1 = new SuiviDepense { DepenseId = depense1.Id, Statut = "En attente" };
-            var suiviDepense2 = new SuiviDepense { DepenseId = depense2.Id, Statut = "En attente" };
+            var suiviDepense1 = new SuiviDepense {Statut = "En attente" };
+            var suiviDepense2 = new SuiviDepense {Statut = "En attente" };
 
             context.SuiviDepenses.AddRange(suiviDepense1, suiviDepense2);
+            context.SaveChanges();
+
+            var depense1 = new Depense { SuiviDepenseId = suiviDepense1.Id, Montant = 18, Description = "Jean", Date = DateTime.Now };
+            var depense2 = new Depense { SuiviDepenseId = suiviDepense2.Id, Montant = 19, Description = "Marie", Date = DateTime.Now };
+
+            context.Depenses.AddRange(depense1, depense2);
             context.SaveChanges();
         }
     }
