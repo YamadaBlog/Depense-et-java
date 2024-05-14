@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "6QRV5w98XQm8dnWmLQbt8+Pj8g6SZyfANdRmJO6fffZLhZzfGA4Ww33z5JoZ1MHqgBVT8dAAih0BLyiZ/vZdGg==",
+  "success": true,
+  "projectFilePath": "C:\\loicm\\dev\\Dev.Common\\Dev.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\loicm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\loicm\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\loicm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Vous exécutez l’opération 'restore' avec une source « HTTP », 'http://api.nuget.org/v3/index.json'. L’accès non-HTTPS sera supprimé dans une future version. Envisagez de migrer vers une source « HTTPS »."
+    }
+  ]
+}
