@@ -7,7 +7,6 @@ public interface IDepenseService
 {
     bool CreateDepense(Depense depense);
     Depense GetDepenseById(int depenseId);
-    Depense GetAuthauthDepense(string depenseEmail, string depenseMpd);
     ICollection<Depense> GetDepenses();
     ICollection<SuiviDepense> GetDepenseOrdersByDepense(int depenseId);
     bool UpdateDepense(Depense depense);

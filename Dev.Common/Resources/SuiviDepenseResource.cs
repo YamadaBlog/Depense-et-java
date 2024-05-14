@@ -8,6 +8,8 @@ namespace Dev.Common.Resources
 {
     public class SuiviDepenseResource
     {
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string Statut { get; set; }
+        public int DepenseId { get; set; }
     }
 }

@@ -1,0 +1,16 @@
+C:\loicm\dev\Dev-Depense\Dev.Business\bin\Debug\net7.0\Dev.Business.deps.json
+C:\loicm\dev\Dev-Depense\Dev.Business\bin\Debug\net7.0\Dev.Business.dll
+C:\loicm\dev\Dev-Depense\Dev.Business\bin\Debug\net7.0\Dev.Business.pdb
+C:\loicm\dev\Dev-Depense\Dev.Business\bin\Debug\net7.0\Dev.Common.dll
+C:\loicm\dev\Dev-Depense\Dev.Business\bin\Debug\net7.0\Dev.Common.pdb
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.csproj.AssemblyReference.cache
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.AssemblyInfoInputs.cache
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.AssemblyInfo.cs
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.csproj.CoreCompileInputs.cache
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.sourcelink.json
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.csproj.CopyComplete
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.dll
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\refint\Dev.Business.dll
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\Dev.Business.pdb
+C:\loicm\dev\Dev-Depense\Dev.Business\obj\Debug\net7.0\ref\Dev.Business.dll

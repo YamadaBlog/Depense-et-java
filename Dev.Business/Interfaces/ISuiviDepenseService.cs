@@ -9,10 +9,10 @@ namespace Dev.Business.Interfaces;
 
 public interface ISuiviDepenseService
 {
-    bool CreateSuiviDepense(ISuiviDepenseService suiviDepense);
-    ISuiviDepenseService GetSuiviDepenseById(int suiviDepenseId);
-    ICollection<ISuiviDepenseService> GetSuiviDepenses();
-    ICollection<Depense> GetDepensesBySuiviDepense(int suiviDepenseId);
-    bool UpdateSuiviDepense(ISuiviDepenseService suiviDepense);
-    bool DeleteSuiviDepense(ISuiviDepenseService suiviDepense);
+    bool CreateSuiviDepense(SuiviDepense suiviDepense);
+    SuiviDepense GetSuiviDepenseById(int suiviDepenseId);
+    ICollection<SuiviDepense> GetSuiviDepenses();
+    bool UpdateSuiviDepense(SuiviDepense suiviDepense);
+    bool DeleteSuiviDepense(SuiviDepense suiviDepense);
+    bool Save();
 }

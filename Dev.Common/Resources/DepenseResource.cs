@@ -8,9 +8,9 @@ namespace Dev.Common.Resources
 {
     public class DepenseResource
     {
-        public int id { get; set; }
-        public int montant { get; set; }
-        public string description { get; set; }
-        public DateTime date { get; set; }
+        public int Id { get; set; }
+        public int Montant { get; set; }
+        public string Description { get; set; }
+        public DateTime Date { get; set; }
     }
 }
