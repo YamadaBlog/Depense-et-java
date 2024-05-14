@@ -57,13 +57,14 @@ public class SuiviDepensesController : ControllerBase
         if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
             return NotFound();
 
-        var depenses = _mapper.Map<List<DepenseResource>>(
-            _suiviDepenseService.GetDepensesBySuiviDepense(suiviDepenseId));
+        var depenses = _suiviDepenseService.GetDepensesBySuiviDepense(suiviDepenseId);
+
+        var validMap = _mapper.Map<List<DepenseResource>>(depenses);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(depenses);
+        return Ok(validMap);
     }
 
     [HttpGet("{suiviDepenseId}")]
@@ -74,24 +75,28 @@ public class SuiviDepensesController : ControllerBase
         if (!_suiviDepenseService.SuiviDepenseExistsById(suiviDepenseId))
             return NotFound();
 
-        var suiviDepense = _mapper.Map<SuiviDepenseResource>(_suiviDepenseService.GetSuiviDepenseById(suiviDepenseId));
+        var suiviDepense = _suiviDepenseService.GetSuiviDepenseById(suiviDepenseId);
+
+        var validMap = _mapper.Map<SuiviDepenseResource>(suiviDepense);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(suiviDepense);
+        return Ok(validMap);
     }
 
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<SuiviDepense>))]
     public IActionResult GetSuiviDepenses()
     {
-        var suiviDepenses = _mapper.Map<List<SuiviDepenseResource>>(_suiviDepenseService.GetSuiviDepenses());
+        var suiviDepenses = _suiviDepenseService.GetSuiviDepenses();
+
+        var validMap = _mapper.Map<List<SuiviDepenseResource>>(suiviDepenses);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(suiviDepenses);
+        return Ok(validMap);
     }
 
     [HttpPut("{suiviDepenseId}")]
@@ -100,6 +105,7 @@ public class SuiviDepensesController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult UpdateSuiviDepense(int suiviDepenseId, [FromBody] SuiviDepenseResource updatedSuiviDepense)
     {
+
         if (updatedSuiviDepense == null)
             return BadRequest(ModelState);
 

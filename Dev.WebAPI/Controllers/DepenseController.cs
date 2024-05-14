@@ -59,24 +59,28 @@ public class DepensesController : ControllerBase
         if (!_depenseService.DepenseExistsById(depenseId))
             return NotFound();
 
-        var depense = _mapper.Map<DepenseResource>(_depenseService.GetDepenseById(depenseId));
+        var depense = _depenseService.GetDepenseById(depenseId);
+
+        var mapValid = _mapper.Map<DepenseResource>(depense);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(depense);
+        return Ok(mapValid);
     }
 
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Depense>))]
     public IActionResult GetDepenses()
     {
-        var depenses = _mapper.Map<List<DepenseResource>>(_depenseService.GetDepenses());
+        var depenses = _depenseService.GetDepenses();
+
+        var mapValid = _mapper.Map<List<DepenseResource>>(depenses);
 
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        return Ok(depenses);
+        return Ok(mapValid);
     }
 
     [HttpPut("{depenseId}")]
