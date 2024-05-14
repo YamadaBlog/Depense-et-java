@@ -11,10 +11,10 @@ C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.Business.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.Common.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.Business.pdb
 C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.Common.pdb
-C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\Dev.Service.csproj.CopyComplete
 C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\Dev.Service.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\refint\Dev.Service.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\Dev.Service.pdb
 C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\ref\Dev.Service.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.DataAccess.dll
 C:\loicm\dev\Dev-Depense\Dev.Service\bin\Debug\net7.0\Dev.DataAccess.pdb
+C:\loicm\dev\Dev-Depense\Dev.Service\obj\Debug\net7.0\Dev.Service.csproj.CopyComplete

@@ -17,10 +17,10 @@ namespace Dev.DataAccess.Data
             base.OnModelCreating(modelBuilder);
 
             // Configurer la relation entre SuiviDepense et Depense
-            modelBuilder.Entity<SuiviDepense>()
-                .HasOne(p => p.Depense)
-                .WithMany(pc => pc.SuiviDepenses)
-                .HasForeignKey(p => p.DepenseId);
+            modelBuilder.Entity<Depense>()
+                .HasOne(p => p.SuiviDepense)
+                .WithMany(pc => pc.Depenses)
+                .HasForeignKey(p => p.SuiviDepenseId);
 
         }
     }

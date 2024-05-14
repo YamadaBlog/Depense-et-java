@@ -9,8 +9,8 @@ namespace Dev.Common.Models
     public class SuiviDepense
     {
         public int Id { get; set; }
-        public int DepenseId { get; set; }
         public string Statut { get; set; }
-        public Depense Depense { get; set; }
+
+        public ICollection<Depense> Depenses { get; set; }
     }
 }

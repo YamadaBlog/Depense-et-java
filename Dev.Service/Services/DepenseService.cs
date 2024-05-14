@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Dev.Service.Services;
 
-public class DepenseService
+public class DepenseService : IDepenseService
 {
     private readonly DataContext _context;
 
@@ -33,11 +33,6 @@ public class DepenseService
     public Depense GetDepenseById(int depenseId)
     {
         return _context.Depenses.Where(c => c.Id == depenseId).FirstOrDefault();
-    }
-
-    public ICollection<SuiviDepense> GetSuiviDepensesByDepense(int depenseId)
-    {
-        return _context.SuiviDepenses.Where(r => r.Depense.Id == depenseId).ToList();
     }
 
     public bool UpdateDepense(Depense depense)

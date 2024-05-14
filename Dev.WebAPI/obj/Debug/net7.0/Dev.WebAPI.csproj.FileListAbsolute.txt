@@ -256,9 +256,9 @@ C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.bui
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Dev.WebAPI.props
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\staticwebassets.pack.json
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\scopedcss\bundle\Dev.WebAPI.styles.css
-C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\Dev.WebAPI.csproj.CopyComplete
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\Dev.WebAPI.dll
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\refint\Dev.WebAPI.dll
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\Dev.WebAPI.pdb
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\Dev.WebAPI.genruntimeconfig.cache
 C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\ref\Dev.WebAPI.dll
+C:\loicm\dev\Dev-Depense\Dev.WebAPI\obj\Debug\net7.0\Dev.WebAPI.csproj.CopyComplete

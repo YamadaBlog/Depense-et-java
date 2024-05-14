@@ -45,18 +45,26 @@ public class SuiviDepenseService : ISuiviDepenseService
 
     public bool SuiviDepenseExists(SuiviDepenseResource suiviDepenseCreate)
     {
-        if (_context.SuiviDepenses.Any(r => r.Id == suiviDepenseCreate.Id))
-        {
-            return true;
-        }
-        else
-        {
-            return (!_context.SuiviDepenses.Any(r => r.Id == suiviDepenseCreate.Id)) && (!_context.Depenses.Any(r => r.Id == suiviDepenseCreate.DepenseId));
-        }
+        return _context.SuiviDepenses.Any(r => r.Id == suiviDepenseCreate.Id);
     }
     public bool Save()
     {
         var saved = _context.SaveChanges();
         return saved > 0 ? true : false;
+    }
+
+    public ICollection<Depense> GetDepensesBySuiviDepense(int suiviDepenseId)
+    {
+        return _context.Depenses.Where(r => r.SuiviDepense.Id == suiviDepenseId).ToList();
+    }
+
+    public bool SuiviDepenseExists(SuiviDepense suiviDepense)
+    {
+        return _context.SuiviDepenses.Any(r => r.Id == suiviDepense.Id);
+    }
+
+    public bool SuiviDepenseExistsById(int suiviDepenseId)
+    {
+        return _context.SuiviDepenses.Any(r => r.Id == suiviDepenseId);
     }
 }
