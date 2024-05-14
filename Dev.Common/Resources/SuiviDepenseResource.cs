@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dev.Business.Interfaces
+namespace Dev.Common.Resources
 {
-    internal class Class1
+    public class SuiviDepenseResource
     {
+        public int id { get; set; }
     }
 }

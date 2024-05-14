@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\loicm\\dev\\Dev.Common\\Dev.Common.csproj",
+      "projectUniqueName": "C:\\loicm\\dev\\Dev-Depense\\Dev.Common\\Dev.Common.csproj",
       "projectName": "Dev.Common",
-      "projectPath": "C:\\loicm\\dev\\Dev.Common\\Dev.Common.csproj",
+      "projectPath": "C:\\loicm\\dev\\Dev-Depense\\Dev.Common\\Dev.Common.csproj",
       "packagesPath": "C:\\Users\\loicm\\.nuget\\packages\\",
-      "outputPath": "C:\\loicm\\dev\\Dev.Common\\obj\\",
+      "outputPath": "C:\\loicm\\dev\\Dev-Depense\\Dev.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

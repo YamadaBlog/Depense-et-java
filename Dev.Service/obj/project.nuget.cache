@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hpq2DGdA/dt2juTDXZxSZu1acs+0AuLDMmtZjPIbY97KN35zrtE9gFqfG7NmYmWu8DLK27QcRPmvifKH53ufdQ==",
+  "dgSpecHash": "v7q+WkrD/Zqz+Gn3/x29V3ESxoz4vZUZJWJFHrxjKNudT2YHessOtmUF5iA7mU3k2oaGsImMm3lfV5tpIITpcw==",
   "success": true,
-  "projectFilePath": "C:\\loicm\\dev\\Dev.Service\\Dev.Service.csproj",
+  "projectFilePath": "C:\\loicm\\dev\\Dev-Depense\\Dev.Service\\Dev.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\loicm\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
     "C:\\Users\\loicm\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
