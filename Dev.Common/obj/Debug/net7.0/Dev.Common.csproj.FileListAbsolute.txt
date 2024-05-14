@@ -1,0 +1,12 @@
+C:\loicm\dev\Dev-Depense\Dev.Common\bin\Debug\net7.0\Dev.Common.deps.json
+C:\loicm\dev\Dev-Depense\Dev.Common\bin\Debug\net7.0\Dev.Common.dll
+C:\loicm\dev\Dev-Depense\Dev.Common\bin\Debug\net7.0\Dev.Common.pdb
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.AssemblyInfoInputs.cache
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.AssemblyInfo.cs
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.csproj.CoreCompileInputs.cache
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.sourcelink.json
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.dll
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\refint\Dev.Common.dll
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\Dev.Common.pdb
+C:\loicm\dev\Dev-Depense\Dev.Common\obj\Debug\net7.0\ref\Dev.Common.dll
